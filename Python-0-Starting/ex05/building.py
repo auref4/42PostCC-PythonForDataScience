@@ -3,6 +3,7 @@ import sys
 
 def count_str_and_print(string: str):
     """Count and display upper-case, lower-case, punctuation, digits, space"""
+
     size = len(string)
     upper_case = lower_case = punctuation = digits = space = 0
 
@@ -28,6 +29,7 @@ def count_str_and_print(string: str):
 
 def main():
     """Main, handle errors and call necessary functions """
+
     try:
         if len(sys.argv) == 1:
             print("What is the text to count ?")
@@ -35,9 +37,9 @@ def main():
         elif len(sys.argv) == 2:
             text = sys.argv[1]
         else:
-            raise ValueError("AssertionError: more than 1 argument provided")
+            raise AssertionError("AssertionError: more than 1 argument provided")
         count_str_and_print(text)
-    except ValueError as e:
+    except Exception as e:
         print(e)
         return
 
