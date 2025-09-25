@@ -1,5 +1,5 @@
-import  time
-from    datetime import date
+import time
+from datetime import date
 
 t = time.gmtime(0)
 sec = time.time()
