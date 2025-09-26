@@ -1,13 +1,13 @@
 def NULL_not_found(object: any) -> int:
-    if object == None:
+    if object is None:
         print("Nothing :", object, type(object))
-    elif type(object) == float and object != object:
+    elif type(object) is float and object != object:
         print("Cheese :", object, type(object))
-    elif type(object) == int and object == 0:
+    elif type(object) is int and object == 0:
         print("Zero :", object, type(object))
-    elif type(object) == str and object == '':
+    elif type(object) is str and object == '':
         print("Empty :", object, type(object))
-    elif type(object) == bool and object == False:
+    elif type(object) is bool and object is False:
         print("Fake :", object, type(object))
     else:
         print("Type not found")
