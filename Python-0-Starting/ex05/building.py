@@ -37,7 +37,7 @@ def main():
         elif len(sys.argv) == 2:
             text = sys.argv[1]
         else:
-            raise AssertionError("AssertionError: The argument are bad")
+            raise AssertionError("AssertionError: The arguments are bad")
         count_str_and_print(text)
     except Exception as e:
         print(e)
