@@ -13,7 +13,7 @@ def give_bmi(height: list[int | float],
     if not all(isinstance(v, (int, float)) for v in weight):
         raise TypeError("The value in 'weight' must be int or float")
     if len(height) != len(weight):
-        raise TypeError("Parameters must have same size")
+        raise ValueError("Parameters must be same size")
 
     # Give bmi
     np_height = np.array(height)
@@ -36,4 +36,4 @@ def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
     np_bmi = np.array(bmi)
     result = np_bmi > limit  # Compare bmi with limit and return bool array
 
-    return result.tolist()
+    return result.tolist()  # Return list
